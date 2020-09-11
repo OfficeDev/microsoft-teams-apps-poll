@@ -1,0 +1,35 @@
+@import "./../../scss/common.scss";
+
+.radio-item-container {
+  height: 48px;
+  align-items: center;
+  margin: 0px;
+}
+
+.checkmark-icons-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+}
+
+.checkmark-icon {
+  position: absolute;
+}
+
+.checkmark-bg-icon > svg {
+  height: 24px;
+  width: 24px;
+}
+
+.checkmark-tick-icon > svg {
+  height: 12px;
+  width: 12px;
+}
+
+.radio-item-content {
+  flex: 1;
+  font-size: 16px;
+}

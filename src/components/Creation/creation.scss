@@ -1,0 +1,30 @@
+@import "./../../scss/common.scss";
+
+.title-box {
+  font-weight: bold;
+  .client-mobile & {
+    font-size: 16px;
+  }
+}
+
+.choice-item-circle {
+  align-self: center;
+  padding: 2px;
+}
+
+.settings-summary-mobile-container {
+  padding: 32px 0px;
+}
+
+.indentation {
+  @include resolve-dir(margin-left, 8px);
+}
+
+.settings-icon {
+  @include resolve-dir(margin-right, 8px);
+}
+
+.settings-summary-footer {
+  cursor: pointer;
+  display: flex;
+}

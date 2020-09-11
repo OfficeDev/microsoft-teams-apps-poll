@@ -1,0 +1,34 @@
+@import "./../../scss/common.scss";
+
+.choice-item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.choice-container {
+  padding-top: 16px;
+}
+
+.add-options {
+  margin-top: 8px;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.plus-icon {
+  @include resolve-dir(margin-right, 8px);
+}
+
+.item-content {
+  font-size: 14px;
+  .client-mobile & {
+    font-size: 16px;
+  }
+}
+
+.choice-trash-can {
+  cursor: pointer !important;
+}

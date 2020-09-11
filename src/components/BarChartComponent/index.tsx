@@ -1,0 +1,1 @@
+export {BarChartComponent, IBarChartItem, IBarChartComponentProps} from "./BarChartComponent";
