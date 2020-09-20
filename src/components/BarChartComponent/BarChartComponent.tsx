@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import * as React from "react";
 import "./BarChartComponent.scss";
 import { Flex, Text, FlexItem } from "@fluentui/react-northstar";

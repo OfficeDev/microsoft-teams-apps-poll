@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import * as React from "react";
 import { Calendar, DayOfWeek } from "office-ui-fabric-react/lib/Calendar";
 import "./DatePickerView.scss";

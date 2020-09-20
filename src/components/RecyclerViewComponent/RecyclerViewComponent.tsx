@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import * as React from "react";
 import { RecyclerListView, DataProvider, LayoutProvider } from "recyclerlistview/web";
 import { Flex } from "@fluentui/react-northstar";

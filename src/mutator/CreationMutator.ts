@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import { mutator } from "satcheljs";
 import {
     setContext, setSendingFlag, goToPage, updateTitle, updateSettings, updateChoiceText, deleteChoice, shouldValidateUI,

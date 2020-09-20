@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import * as React from "react";
 import {
     addChoice, updateTitle, deleteChoice, updateChoiceText, callActionInstanceCreationAPI, updateSettings, goToPage, shouldValidateUI

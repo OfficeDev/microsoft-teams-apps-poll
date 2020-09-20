@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import * as React from "react";
 import "./InputBox.scss";
 import { Input, InputProps, Text, Flex, ShorthandValue, BoxProps, ExclamationCircleIcon } from "@fluentui/react-northstar";

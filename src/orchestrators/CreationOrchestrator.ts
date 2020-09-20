@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import { setProgressState } from "./../actions/CreationActions";
 import { toJS } from "mobx";
 import { Localizer } from "../utils/Localizer";

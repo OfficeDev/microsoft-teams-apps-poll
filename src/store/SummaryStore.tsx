@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import { createStore } from "satcheljs";
 import { ProgressState } from "./../utils/SharedEnum";
 import * as actionSDK from "@microsoft/m365-action-sdk";

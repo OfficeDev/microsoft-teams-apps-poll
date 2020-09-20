@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import * as React from "react";
 import "./ActionRootView.scss";
 import { Provider, teamsTheme, teamsDarkTheme, teamsHighContrastTheme, ThemePrepared } from "@fluentui/react-northstar";

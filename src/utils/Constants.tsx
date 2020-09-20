@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import { DayOfWeek } from "office-ui-fabric-react/lib/Calendar";
 
 export class Constants {

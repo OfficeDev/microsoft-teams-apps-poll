@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import { mutator } from "satcheljs";
 import getStore, { ViewType } from "./../store/SummaryStore";
 import {

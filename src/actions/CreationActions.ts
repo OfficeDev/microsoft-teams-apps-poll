@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import { action } from "satcheljs";
 import { Page } from "../store/CreationStore";
 import * as actionSDK from "@microsoft/m365-action-sdk";

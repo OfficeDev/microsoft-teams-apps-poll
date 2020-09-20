@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import * as React from "react";
 import { Menu, Text, Flex, Dialog } from "@fluentui/react-northstar";
 import "./AdaptiveMenu.scss";
