@@ -1,34 +1,14 @@
 {
     "properties": {
-        "canAddMore": true,
-        "values": [
-            {
-                "name": "Locale",
-                "valueType": "Text",
-                "isOptional": true
-            }
-        ]
+        "canAddMore": true
     },
     "dataTables": {
         "canAddMore": false,
         "values": [
             {
-                "name": "Default",
-                "rowsEditable": true,
-                "canUserAddMultipleRows": false,
+                "name": "PollDataTable",
                 "dataColumns": {
-                    "canAddMore": false,
-                    "values": [
-                        {
-                            "name": "0",
-                            "valueType": "SingleOption",
-                            "allowNullValue": false,
-                            "options": {
-                                "canAddMore": true
-                            },
-                            "isOptional": false
-                        }
-                    ]
+                    "canAddMore": true
                 }
             }
         ]
