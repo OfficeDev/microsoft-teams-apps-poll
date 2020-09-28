@@ -1,7 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-
 import * as React from "react";
 import { Popup, Input, List, ListProps, FocusTrapZone, ChevronDownIcon } from "@fluentui/react-northstar";
 import "./TimePickerView.scss";

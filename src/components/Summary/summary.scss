@@ -1,145 +1,145 @@
 @import "./../../scss/common.scss";
 
 .primary-text {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .list-container {
-  display: block !important;
-  height: calc(100vh - 150px);
-  width: 100%;
-  bottom: $footer-height;
+    display: block !important;
+    height: calc(100vh - 150px);
+    width: 100%;
+    bottom: $footer-height;
 }
 
 .tabview-container {
-  @extend .body-container;
-  padding-bottom: 0px;
-  .desktop-web & {
-    padding-top: 8px;
-  }
+    @extend .body-container;
+    padding-bottom: 0px;
+    .desktop-web & {
+        padding-top: 8px;
+    }
 }
 
 .download-button {
-  min-width: 96px !important ;
+    min-width: 96px !important ;
 }
 
 .header-container {
-  justify-content: space-between;
-  margin-bottom: 4px;
-  height: 44px;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    height: 44px;
 }
 
 .footer-layout {
-  width: 100%;
+    width: 100%;
 }
 
 .tab-view {
-  width: 100%;
+    width: 100%;
 }
 
 .underline:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .underline {
-  font-weight: bold;
-  cursor: pointer;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .my-response {
-  margin-top: 8px;
-  margin-bottom: 16px;
-  font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
 }
 
 .participation-container {
-  padding-top: 8px;
-  padding-bottom: 16px;
-  .client-mobile & {
+    padding-top: 8px;
     padding-bottom: 16px;
-  }
+    .client-mobile & {
+        padding-bottom: 16px;
+    }
 }
 
 .divider {
-  margin-bottom: 16px;
-  .client-mobile & {
-    margin-bottom: 0px;
-  }
+    margin-bottom: 16px;
+    .client-mobile & {
+        margin-bottom: 0px;
+    }
 }
 
 .participation-title {
-  font-weight: bold;
-  padding-bottom: 8px;
-  font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    font-size: 14px;
 }
 
 .due-date-dialog {
-  @extend .dialog-base;
-  width: fit-content !important;
-  @supports not (width: min-content) {
-    width: auto !important;
-    max-width: 60% !important;
-  }
+    @extend .dialog-base;
+    width: fit-content !important;
+    @supports not (width: min-content) {
+        width: auto !important;
+        max-width: 60% !important;
+    }
 }
 
 .tab-view-footer {
-  justify-content: space-between;
+    justify-content: space-between;
 }
 
 .overflow-hidden {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .no-top-padding {
-  .desktop-web & {
-    padding-top: 0px;
-  }
+    .desktop-web & {
+        padding-top: 0px;
+    }
 }
 
 .non-creator-error-text {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 16px;
 }
 
 .non-creator-error-image {
-  height: 200px;
-  width: 200px;
+    height: 200px;
+    width: 200px;
 }
 
 .non-creator-error-image-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 84px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 84px;
 }
 
 .download-your-responses-link {
     margin-top: 8px;
     color: $brand-color;
-    &:hover{
-      cursor: pointer;
-      text-decoration: underline;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
     }
 }
 
 .user-info-view {
-  padding: 4px 16px 0px 0px;
+    padding: 4px 16px 0px 0px;
 }
 
 .overflow-hidden {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .nowrap {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
 .user-profile-pic {
-  flex-shrink: 0;
+    flex-shrink: 0;
 }
 
 .word-break {
-  word-break: break-all
+    word-break: break-all;
 }

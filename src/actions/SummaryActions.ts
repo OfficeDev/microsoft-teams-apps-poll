@@ -1,7 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-
 import { action } from "satcheljs";
 import { SummaryProgressStatus, ViewType } from "../store/SummaryStore";
 import * as actionSDK from "@microsoft/m365-action-sdk";
