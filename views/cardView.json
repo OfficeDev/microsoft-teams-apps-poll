@@ -1,15 +1,35 @@
 {
+    "schemaVersion": 1,
     "view": {
         "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
         "type": "AdaptiveCard",
         "version": "1.0",
         "body": [
             {
+                "id": "active",
+                "type": "TextBlock",
+                "$when":"${equals(action.status, 'Active')}",
+                "text": "${formatString(strings.dueByDate, ('' + dateString(action.expiryTime, 'SHORT') + ' ' + timeString(action.expiryTime)))}",
+                "_text.comment": "due date if poll is active",
+                "color": "default",
+                "size": "small",
+                "wrap": true
+            },
+            {
+                "id": "close",
+                "type": "TextBlock",
+                "$when":"${equals(action.status, 'Closed')}",
+                "text": "${strings.PollClosed}",
+                "color": "attention",
+                "size": "small",
+                "wrap": true
+            },
+            {
                 "id": "expiry",
                 "type": "TextBlock",
-                "text": "${if(equals(action.status, 'Active'), formatString(strings.dueByDate, ('' + dateString(action.expiryTime, 'SHORT') + ' ' + timeString(action.expiryTime))),strings.PollExpired)}",
-                "_$text.comment": "checking if action is active or not",
-                "color": "${if(equals(action.status, 'Active'), 'default','attention')}",
+                "$when":"${equals(action.status, 'Expired')}",
+                "text": "${strings.PollExpired}",
+                "color": "attention",
                 "size": "small",
                 "wrap": true
             },
@@ -26,7 +46,7 @@
             {
                 "id": "Title",
                 "type": "TextBlock",
-                "text": "**${action.dataTables[0].dataColumns[0].displayName}**",
+                "text": "${action.dataTables[0].dataColumns[0].displayName}",
                 "_$text.comment": "display poll title",
                 "wrap": true,
                 "weight": "bolder",
