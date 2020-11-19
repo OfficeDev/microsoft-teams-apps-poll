@@ -102,11 +102,11 @@
   "ThreeAndOthersResponded": "{0}, {1}, {2} y {3} más respondieron",
   "CreateNewPoll": "Crear una encuesta nueva",
   "ResultsTitle": "Vista de resultados",
-  "$manifest.name": "Encuesta",
+  "$manifest.name": "Sondeo",
   "$manifest.views.LaunchView.header": "Crear sondeo",
   "$manifest.description": "Formula una pregunta y recibe la opinión de los usuarios.",
-  "$manifest.msTeamsProps.name.short": "Encuesta",
-  "$manifest.msTeamsProps.name.full": "Encuesta",
+  "$manifest.msTeamsProps.name.short": "Sondeo",
+  "$manifest.msTeamsProps.name.full": "Sondeo",
   "$manifest.msTeamsProps.description.short": "Formula una pregunta y recibe la opinión de los usuarios.",
-  "$manifest.msTeamsProps.description.full": "Recibe la opinión de tu equipo creando una encuesta en un chat o un canal.​ Encuentra la aplicación en '…' debajo del cuadro de redacción del mensaje​. Escribe la pregunta y las opciones y ya estás listo para empezar. Mantente informado de la participación haciendo un seguimiento de las respuestas. Descarga los resultados de la encuesta y compártelos con tus compañeros de trabajo."
+  "$manifest.msTeamsProps.description.full": "Recibe la opinión de tu equipo creando una encuesta en un chat o un canal.​ Encuentra la aplicación en '…' debajo del cuadro de redacción del mensaje​. Escribe la pregunta y las opciones y ya está listo para empezar. Mantente informado de la participación haciendo un seguimiento de las respuestas. Descarga los resultados de la encuesta y compártelos con tus compañeros de trabajo."
 }

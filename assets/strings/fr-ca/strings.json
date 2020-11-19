@@ -104,9 +104,9 @@
   "ResultsTitle": "Affichage des résultats",
   "$manifest.name": "Sondage",
   "$manifest.views.LaunchView.header": "Créer un sondage",
-  "$manifest.description": "Poser une question et obtenez l'avis des autres",
+  "$manifest.description": "Poser une question et solliciter l'avis des autres",
   "$manifest.msTeamsProps.name.short": "Sondage",
   "$manifest.msTeamsProps.name.full": "Sondage",
-  "$manifest.msTeamsProps.description.short": "Poser une question et obtenez l'avis des autres",
-  "$manifest.msTeamsProps.description.full": "Obtenez l’opinion de votre équipe en créant un sondage dans une session de clavardage ou un canal.​ Recherchez l’application dans «…» sous la zone de composition du message​. Entrez votre question et vos choix et le tour est joué. Effectuer un suivi des réponses afin de maintenir une emprise ferme sur votre participation. Téléchargez les résultats du sondage pour les partager avec vos collègues."
+  "$manifest.msTeamsProps.description.short": "Poser une question et solliciter l'avis des autres",
+  "$manifest.msTeamsProps.description.full": "Obtenez l’opinion de votre équipe en créant un sondage dans une session de clavardage ou un canal.​ Recherchez l’application dans «…» sous la zone de composition du message​. Entrez votre question et vos choix et le tour est joué. Maintenez une emprise sur la participation en suivant les réponses. Téléchargez les résultats du sondage pour les partager avec vos collègues."
 }
