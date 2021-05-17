@@ -1,0 +1,210 @@
+{
+    "schemaVersion": 1,
+    "view": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+                "id": "active",
+                "type": "TextBlock",
+                "$when":"${equals(action.status, 'Active')}",
+                "text": "${formatString(strings.dueByDate, ('' + dateString(action.expiryTime, 'SHORT') + ' ' + timeString(action.expiryTime)))}",
+                "_text.comment": "due date if poll is active",
+                "color": "default",
+                "size": "small",
+                "wrap": true
+            },
+            {
+                "id": "close",
+                "type": "TextBlock",
+                "$when":"${equals(action.status, 'Closed')}",
+                "text": "${strings.PollClosed}",
+                "color": "attention",
+                "size": "small",
+                "wrap": true
+            },
+            {
+                "id": "expiry",
+                "type": "TextBlock",
+                "$when":"${equals(action.status, 'Expired')}",
+                "text": "${strings.PollExpired}",
+                "color": "attention",
+                "size": "small",
+                "wrap": true
+            },
+            {
+                "id": "ResultVisibility",
+                "type": "TextBlock",
+                "text": "${if(equals(action.dataTables[0].rowsVisibility, 'All'), strings.ResultEveryone, strings.ResultCreator)}",
+                "maxLines": 2,
+                "wrap": true,
+                "isSubtle": true,
+                "size": "small",
+                "spacing": "none"
+            },
+            {
+                "id": "Title",
+                "type": "TextBlock",
+                "text": "${action.dataTables[0].dataColumns[0].displayName}",
+                "_$text.comment": "display poll title",
+                "wrap": true,
+                "weight": "bolder",
+                "size": "large",
+                "spacing": "small"
+            },
+            {
+                "id": "Choices",
+                "type": "Container",
+                "style": "emphasis",
+                "items": [
+                    {
+                        "id": "${action.dataTables[0].dataColumns[0].name}",
+                        "type": "Input.ChoiceSet",
+                        "style": "expanded",
+                        "wrap": "true",
+                        "isMultiSelect": false,
+                        "choices": [
+                            {
+                                "$data": "${action.dataTables[0].dataColumns[0].options}",
+                                "title": "${displayName}",
+                                "value": "${name}"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "Responder",
+                "$when": "${equals(action.dataTables[0].rowsVisibility, 'All')}",
+                "type": "Container",
+                "items": [
+                    {
+                        "id": "NoResponder",
+                        "type": "TextBlock",
+                        "$when": "${equals(summary.rowCreatorCount, 0)}",
+                        "_$when.comment": "when no one responeded on poll",
+                        "text": "${strings.BeTheFirstOneToRespond}",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    },
+                    {
+                        "id": "OneResponded",
+                        "type": "TextBlock",
+                        "$when": "${equals(summary.rowCreatorCount, 1)}",
+                        "_$when.comment": "when the count of responder is 1",
+                        "text": "${formatString(strings.OneResponded, responders[0].displayName)}",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    },
+                    {
+                        "id": "TwoResponded",
+                        "type": "TextBlock",
+                        "$when": "${equals(summary.rowCreatorCount, 2)}",
+                        "_$when.comment": "when the count of responders is 2",
+                        "text": "${formatString(strings.TwoResponded, responders[0].displayName, responders[1].displayName)}",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    },
+                    {
+                        "id": "ThreeResponded",
+                        "type": "TextBlock",
+                        "$when": "${equals(summary.rowCreatorCount, 3)}",
+                        "_$when.comment": "when the count of responders is 3",
+                        "text": "${formatString(strings.ThreeResponded, responders[0].displayName, responders[1].displayName, responders[2].displayName)}",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    },
+                    {
+                        "id": "FourResponded",
+                        "type": "TextBlock",
+                        "$when": "${equals(summary.rowCreatorCount, 4)}",
+                        "_$when.comment": "when the count of responders is 4",
+                        "text": "${formatString(strings.ThreeAndOneOtherResponded, responders[0].displayName, responders[1].displayName, responders[2].displayName)}",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    },
+                    {
+                        "id": "MoreResponded",
+                        "type": "TextBlock",
+                        "$when": "${greater(summary.rowCreatorCount, 4)}",
+                        "_$when.comment": "when the count of responder is greater than 4",
+                        "text": "${formatString(strings.ThreeAndOthersResponded, responders[0].displayName, responders[1].displayName, responders[2].displayName, sub(summary.rowCreatorCount, 3))}",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    }
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "id": "RespondButton",
+                "$when": "${equals(action.status, 'Active')}",
+                "title": "${strings.Submit}",
+                "command": "SubmitActionDataRow"
+            },
+            {
+                "id": "Result",
+                "title": "${strings.Results}",
+                "command": "LaunchActionPackageView",
+                "parameters": {
+                    "viewName": "DetailView"
+                }
+            }
+        ]
+    },
+    "data": {
+        "strings": {
+            "command": "GetLocalizedStrings"
+        },
+        "action": {
+            "command": "GetAction"
+        },
+        "summary": {
+            "command": "GetActionDataRowsSummary",
+            "parameters": {
+                "addDefaultAggregates": true
+            }
+        },
+        "responses": {
+            "command": "GetActionDataRows",
+            "parameters": {
+                "pageSize": 3
+            }
+        },
+        "creator": {
+            "command": "GetSubscriptionMembers",
+            "parameters": {
+                "memberIds": [
+                    "$ActionCreator"
+                ]
+            }
+        },
+        "responders": {
+            "command": "GetSubscriptionMembers",
+            "parameters": {
+                "memberIds": [
+                    "$ActionDataRowCreators"
+                ]
+            }
+        }
+    }
+}

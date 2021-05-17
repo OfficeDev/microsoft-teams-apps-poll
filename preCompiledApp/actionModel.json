@@ -1,0 +1,37 @@
+{
+    "schemaVersion": 1,
+    "properties": {
+        "canAddMore": true,
+        "values": [
+            {
+                "name": "Locale",
+                "valueType": "Text",
+                "isOptional": true
+            }
+        ]
+    },
+    "dataTables": {
+        "canAddMore": false,
+        "values": [
+            {
+                "name": "Default",
+                "rowsEditable": true,
+                "canUserAddMultipleRows": false,
+                "dataColumns": {
+                    "canAddMore": false,
+                    "values": [
+                        {
+                            "name": "0",
+                            "valueType": "SingleOption",
+                            "allowNullValue": false,
+                            "options": {
+                                "canAddMore": true
+                            },
+                            "isOptional": false
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
