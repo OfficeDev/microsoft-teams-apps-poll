@@ -1,15 +1,15 @@
 {
     "schemaVersion": 1,
     "tag": "poll-teams-app",
-    "id": "<packageId>",
+    "id": "com.contoso.pollapp",
     "name": "Poll",
     "description": "Ask a question and get people's opinion",
     "showLoadingIndicator": true,
     "developer": {
-        "name": "<name>",
-        "websiteUrl": "<websiteUrl>",
-        "privacyUrl": "<privacyUrl>",
-        "termsOfUseUrl": "<termsOfUseUrl>"
+        "name": "Rahul Trimukhe",
+        "websiteUrl": "https://atos.net/en/",
+        "privacyUrl": "https://atos.net/en/privacy",
+        "termsOfUseUrl": "https://atos.net/en/termsOfUse"
     },
     "icon": "images/appIcon.png",
     "actionModel": "actionModel.json",
